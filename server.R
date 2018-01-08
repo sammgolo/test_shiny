@@ -1,74 +1,17 @@
-
-if (!require(rJava)) {
-  install.packages("rJava")
-  library(rJava)
-}
-
-if (!require(XLConnect)) {
-  install.packages("XLConnect", type="source")
-  library(XLConnect)
-}
-
-if (!require(devtools)) {
-  install.packages("devtools")
-  library(devtools)
-}
-
-if (!require(rCharts)) {
-  install_github("rCharts", "ramnathv")
-  library(rCharts)
-}
-
-if (!require(Rcpp)) {
-  install.packages("Rcpp")
-  library(Rcpp)
-}
-
-if (!require(magrittr)) {
-  install.packages("magrittr")
-  library(magrittr)
-}
-
-if (!require(dplyr)) {
-  install.packages("dplyr")
-  library(dplyr)
-}
-
-if (!require(viridisLite)) {
-  install.packages("viridisLite")
-  library(viridisLite)
-}
-
-if (!require(rCharts)) {
-  install.packages("rCharts")
-  library(rCharts)
-}
-
-if (!require(tidyr)) {
-  install.packages("tidyr")
-  library(tidyr)
-}
-
-if (!require(RColorBrewer)) {
-  install.packages("RColorBrewer")
-  library(RColorBrewer)
-}
-
-if (!require(shiny)) {
-  install.packages("shiny")
-  library(shiny)
-}
-
-if (!require(shinydashboard)) {
-  install.packages("shinydashboard")
-  library(shinydashboard)
-}
-
-if (!require(rsconnect)) {
-  install.packages("rsconnect")
-  library(rsconnect)
-}
-
+library(shiny)
+library(XLConnect)
+library(devtools)
+library(rCharts)
+library(Rcpp)
+library(magrittr)
+library(dplyr)
+library(viridisLite)
+library(rCharts)
+library(tidyr)
+library(RColorBrewer)
+library(shiny)
+library(shinydashboard)
+library(rsconnect)
 
 shinyServer(function(input, output, session) {
 	wb <- loadWorkbook("H&R Block Intelligence Report.xlsx")
